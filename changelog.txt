@@ -1,0 +1,72 @@
+= 1.4.0 =
+* Various fixes and updates
+* Better sanitization
+
+= 1.3.5 =
+* Improved performance by selectively loading assets
+
+= 1.3.4 =
+* New shortcode: Definition lists!
+* Fixed minor errors in the shortcode generator
+* Fixed responsive styles for narrow and fit columns
+
+= 1.3.3 =
+* New shortcode: Login form!
+* Fixed PHP warnings as well as faulty generator links
+
+= 1.3.2 =
+* Minor fixes
+
+= 1.3.1 =
+* New shortcode: Registration form!
+
+= 1.3.0 =
+* Changed the settings page to use the native WordPress Settings API.
+* Overhauled the shortcode generator and added a revamped interface.
+* Reorganized some of the shortcodes in the visaul editor button.
+* Added better handling of defaults.
+
+= 1.2.3 =
+* Changed the Cycle library to Cycle 2.
+* Optimized performance by loading JS scripts only when needed
+
+= 1.2.2 =
+* Fixed the section shortcode not being included.
+* Added missing shortcodes to the visual editor generator.
+* Added a new shortcode: mailchimp optin form.
+* Added a new shortcode: animation area.
+* Added a new shortcode: clearing div.
+
+= 1.2.1 =
+* Fixed the icon generator not displaying properly.
+
+= 1.2.0 =
+* The plugin has been completely revamped with many new features.
+* Buttons now have background colors, gradients, icons and borders.
+* Notices have been renamed to Focus Boxes, meant to highlight content. Notices still work as a shortcode but are not supported.
+* Focus Boxes now have gradient backgrounds.
+* Accordions can now be set as as part of a group, allowing only a single one to remain open.
+* Inline features can now have multiple icon sizes, colors, backgrounds, and borders.
+* Team members have been upgraded with new contact info, layout, and social features.
+* Testimonials can now be placed facing left or right.
+* Counters have been streamlined.
+* Added more options to progress bars, such as gradients.
+* Custom lists no longer affect a UL HTML element. They are now a single list item for flexibility purposes.
+* Separators now have icons, descriptions, and various styles.
+* Added more options to the posts shortcode to better filter queries.
+* Attributes that now take an image can have either a full URL or a post ID.
+* Cleaned styles and improved overall CSS.
+* Added background colors, gradients, icons and borders to focus boxes.
+* Added a setting to specify a shortcode prefix in order to avoid conflicts.
+
+= 1.1.0 =
+* Changed JS files to use the TinyMCE version 4.X API.
+
+= 1.0.2 =
+* Fixed team shortcodes and added animation, timeout, and speed parameters to slideshows
+
+= 1.0.1 =
+* Fixed minor CSS issues and markup corrections
+
+= 1.0.0 =
+* Plugin release, yay!
