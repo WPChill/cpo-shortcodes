@@ -101,36 +101,6 @@ if(!function_exists('ctsc_alter_brightness')){
 	}
 }
 
-
-add_action('admin_notices', 'ctsc_admin_welcome_notice', 90);
-function ctsc_admin_welcome_notice(){	
-	$screen = get_current_screen();
-	$welcome_dismissed = trim(ctsc_get_option('ctsc_forge_notice'));
-	
-	$display = true;
-	if(isset($_GET['action']) && $_GET['action'] == 'edit' || $screen->action == 'add' || $screen->base == 'plugins' || $screen->base == 'widgets') 
-		$display = false;
-	
-	wp_enqueue_script('thickbox');
-	if(current_user_can('manage_options') && $welcome_dismissed != 'dismissed' && $display){
-		$plugin_url = add_query_arg(array('tab' => 'plugin-information', 'plugin' => 'forge', 'TB_iframe' => 'true', 'width' => '640', 'height' => '500'), admin_url('plugin-install.php'));
-		echo '<div class="updated">';
-		echo '<div class="ctsc-notice">';
-		echo '<a style="float:right; color:#999;" href="'.add_query_arg('ctsc-dismiss', 'ctsc_forge_notice').'">'.__('Dismiss This Notice', 'ctsc').'</a>';
-		echo '<p>';
-		echo '<b>'.__('If you like CPO Shortcodes, here is a new plugin you will love.', 'ctsc').'</b> ';
-		echo __('We have just released Forge, a new front-end page builder that makes creating stunning layouts a breeze. Plus, it\'s completely free.', 'ctsc');
-		echo '</p>';
-		echo '<p>';
-		echo '<a href="'.$plugin_url.'" class="thickbox button button-primary" style="text-decoration: none;">'.__('Download Forge For Free', 'ctsc').'</a> &nbsp;&nbsp;';
-		echo '<a href="//cpothemes.com/plugin/forge" target="_blank" style="text-decoration: none;">'.__('Learn more', 'ctsc').'</a>';
-		echo '</p>';
-		echo '</div>';
-		echo '</div>';
-	}
-}
-
-
 //Notice display and dismissal
 if(!function_exists('ctsc_admin_notice_control')){
 	add_action('admin_init', 'ctsc_admin_notice_control');
